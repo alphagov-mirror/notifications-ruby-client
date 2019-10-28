@@ -7,15 +7,6 @@ RUN \
 		gcc \
 		make \
 		curl \
-		git \
-
-	&& echo "Clean up" \
-	&& rm -rf /var/lib/apt/lists/* /tmp/*
-
-ENV PATH=/var/project/vendor/bin:$PATH \
-    BUNDLE_PATH="/var/project/vendor/bundle" \
-    BUNDLE_BIN="/var/project/vendor/bin" \
-    BUNDLE_APP_CONFIG="/var/project/.bundle"
-
+		git
 
 WORKDIR /var/project
