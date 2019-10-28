@@ -9,6 +9,9 @@ RUN \
 		curl \
 		git \
 
+	&& echo "Clean up" \
+	&& rm -rf /var/lib/apt/lists/* /tmp/*
+
 ENV PATH=/var/project/vendor/bin:$PATH \
     BUNDLE_PATH="/var/project/vendor/bundle" \
     BUNDLE_BIN="/var/project/vendor/bin" \
